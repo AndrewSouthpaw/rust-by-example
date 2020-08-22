@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Person","A human being is represented here"]]});
