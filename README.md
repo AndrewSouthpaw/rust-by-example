@@ -1,4 +1,9 @@
 
+# Rust By Example notes
+
+A collection of notes written while working through the [Rust By Example](https://doc.rust-lang.org/stable/rust-by-example) site.
+
+
 ## 1. Hello World
 
 Comments: `//` or `/* */`
