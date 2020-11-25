@@ -3,7 +3,6 @@
 
 A collection of notes written while working through the [Rust By Example](https://doc.rust-lang.org/stable/rust-by-example) site.
 
-
 ## 1. Hello World
 
 Comments: `//` or `/* */`
@@ -446,7 +445,7 @@ rand = "0.7.3"
 
 Use in some code:
 
-```
+```rust
 use rand::Rng;
 
 fn main() {
@@ -468,3 +467,41 @@ Build and run:
 ```
 $ cargo run
 ```
+
+## Null Safety
+
+```rust
+fn greet_user(name: Option<String>) {
+    match name {
+        Some(name) => println!("Hello, {}!", name),
+        None => println!("Howdy stranger!")
+    }
+}
+``` 
+
+
+## ?. Borrowing
+
+```rust
+fn main() {
+    let mut name = String::from("Vivian");
+    let nickname = &name[..3];
+    name.clear()
+    println!("Hello there, {}!", nickname); // bad times
+}
+```
+
+## ?. Async/Await
+
+```rust
+async fn first_function() -> u32 { 42 }
+
+async fn another_function() {
+    let future = first_function();
+
+    let result: u32 = future.await;
+
+    println!("{}", result);
+}
+```
+

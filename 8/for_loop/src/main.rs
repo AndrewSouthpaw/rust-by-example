@@ -12,6 +12,8 @@ fn main() {
     let nums = [2, 4, 6, 8];
 
     for n in nums.iter() {
+        // borrow syntax is used to ensure we aren't changing
+        // the array or values
         if n == &8 {
             println!("{}", n);
         } else {
